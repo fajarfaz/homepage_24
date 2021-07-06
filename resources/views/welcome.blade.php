@@ -49,13 +49,105 @@
             scrollbar-width: none;  /* Firefox */
         }
 
+        .container {
+         
+         
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+        
+          background-color: rgba(255, 255, 255, .15);
+
+          backdrop-filter: blur(5px);
+      }
+
         </style>
      
 
        
     </head>
-    <body class="antialiased" >
-        <div class="w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-center text-gray-500 overflow-y-auto" style="background-image: url({{ asset('image/bk.svg') }});" >
+    <body class="antialiased " >
+        <div class="w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
+           <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-12 font-semibold text-base md:text-lg gap-4 h-full h-max-screen"  >
+          
+
+           <div class="p-2 container border-7 border-blue-400 rounded-2xl mx-auto " data-aos="fade-down">
+           <div class=" rounded-2xl grid grid-cols-5 p-4 rounded-2xl gap-8" >
+            <div class="relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat " data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
+            url('https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');;" >
+            <div class="flex flex-col space-y-2 h-full text-white">
+              <label class=" text-xl">24Slides <span class="font-normal">Malang</span></label>
+
+              <label class="text-white text-3xl pt-48 z-10 border-l-2 border-white pl-2">Instant access just by logging in to use all existing apps</label>
+              <label class="z-10 font-normal text-center">- IT Support -</label>
+             </div>
+               <div style="transform: skewY(-6deg);transform-origin: top left;" class="absolute w-full h-3/6 bg-gradient-to-tr from-blue-400 to blue-700 rounded-bl-xl bottom-0 left-0 "></div>
+               <div style="transform: skewY(6deg);transform-origin: top left;" class="absolute w-full h-3/6 bg-gradient-to-tr from-purple-400 to purple-700 rounded-bl-xl bottom-16 right-0 shadow-lg"></div>
+              
+            </div>
+           
+            <div class="col-span-3 text-left grid grid-rows-4 pt-4  mx-auto" data-aos="fade-right"> 
+                <div class="flex flex-col my-5 ">
+                <label class="text-4xl text-gray-700 font-semibold">Log in to your account</label>
+                <label class="mt-1">Please sign to continue access <span class="text-red-500">24</span><span class="text-blue-900">Slides</span> management apps</label>
+                </div>
+                <div class="row-span-3 py-3 relative">
+
+                    <form class="w-full max-w-sm ">
+                      <div class="md:flex md:items-center mb-6">
+                        <div class="md:w-1/3">
+                          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                           Email
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                      <input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="email" placeholder="email@domain.com">
+                  </div>
+              </div>
+              <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                    Password
+                </label>
+                </div>
+                <div class="md:w-2/3">
+                          <input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="password" placeholder="******************">
+                      </div>
+                  </div>
+                  <div class="md:flex md:items-center mb-2 ">
+                    <label class="md:w-1/3"> </label>
+                    <label class="md:w-2/3 block text-gray-500 font-bold flex items-center">
+                      <input class="mr-2 leading-tight h-4 w-4 rounded-2xl"  type="checkbox">
+                      <span class="text-base">
+                            Remember me
+                        </span>
+                    </label>
+                   
+                </div>
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/3"></div>
+                <div class="md:w-2/3">
+                  <button class="shadow-md bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded w-full" type="button">
+                    Sign In
+                </button>
+            </div>
+            </div>
+            <div class="bottom-0 absolute flex justify-between items-center w-full space-x-2">
+                <div class="flex-auto border border-gray-300 rounded-xl w-full"></div>
+            <label class="flex-shrink-0 text-base w-auto ">Forgot your Password?<a href="#" class="text-blue-500 hover:text-blue-700 duration-300"> Reset here </a></label>
+            </div>
+            </form>
+                </div>
+            </div>
+           </div>
+           </div>
+
+           </div>
+
+            
+        
+        </div>
+
+
+        <div class=" w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-center text-gray-500 overflow-y-auto bg-fixed" style="background-image: url({{ asset('image/bk.svg') }});" >
            
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-12 font-semibold text-base md:text-lg gap-4 h-full" >
 
@@ -76,7 +168,7 @@
                   <label class="text-gray-500 tracking-wide">We have 2 App Detected</label> 
               </div>
               <div class="flex flex-row justify-self-end space-x-2 items-center">
-                 <input type="search"  id="myInputSearch" onkeyup="searching1()"  class="bg-gray-50 rounded-full py-1 pl-5 w-full md:w-48 border-2 tracking-wide font-normal focus:outline-none focus:ring focus:border-blue-300 border-gray-400 duration-300 hover:border-blue-400" placeholder="Search">
+                 <input type="search"  id="myInputSearch" onkeyup="searching1()"  class="bg-gray-50 rounded-full py-1 pl-5 w-full md:w-48 border-2 tracking-wide font-normal focus:outline-none focus:ring focus:border-blue-300 border-gray-400 duration-300 hover:border-blue-400 pr-2" placeholder="Search">
                <div class="flex-shrink-0 bg-blue-400 hover:bg-blue-500 duration-300 cursor-pointer text-white rounded-full md:w-12 md:h-12 text-xl w-9 h-9 md:text-2xl shadow-lg items-center flex">
                <i class="far fa-bell m-auto"></i>
                 </div>
@@ -172,6 +264,7 @@
             
         
         </div>
+
         <script type="text/javascript">
               function searching1() {
 
