@@ -65,18 +65,18 @@
        
     </head>
     <body class="antialiased " >
-        <div class="w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
-           <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-12 font-semibold text-base md:text-lg gap-4 h-full h-max-screen"  >
+        <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
+           <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-full h-max-screen"  >
           
 
-           <div class="p-2 container border-7 border-blue-400 rounded-2xl mx-auto " data-aos="fade-down">
+           <div class="py-2 md:px-0 px-4 container border-7 border-blue-400 rounded-none md:rounded-2xl mx-auto " data-aos="fade-down">
            <div class=" rounded-2xl grid grid-cols-5 p-4 rounded-2xl gap-8" >
-            <div class="relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat " data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
+            <div class="md:block hidden relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat " data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
             url('https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');;" >
             <div class="flex flex-col space-y-2 h-full text-white">
               <label class=" text-xl">24Slides <span class="font-normal">Malang</span></label>
 
-              <label class="text-white text-3xl pt-48 z-10 border-l-2 border-white pl-2">Instant access just by logging in to use all existing apps</label>
+              <label class="text-white text-3xl md:pt-56 lg:pt-64 xl:pt-48 z-10 border-l-2 border-white pl-2">Instant access just by logging in to use all existing apps</label>
               <label class="z-10 font-normal text-center">- IT Support -</label>
              </div>
                <div style="transform: skewY(-6deg);transform-origin: top left;" class="absolute w-full h-3/6 bg-gradient-to-tr from-blue-400 to blue-700 rounded-bl-xl bottom-0 left-0 "></div>
@@ -84,7 +84,7 @@
               
             </div>
            
-            <div class="col-span-3 text-left grid grid-rows-4 pt-4  mx-auto" data-aos="fade-right"> 
+            <div class="col-span-5 md:col-span-3 text-left grid grid-rows-3 lg:grid-rows-4 pt-4 mx-auto" data-aos="fade-right"> 
                 <div class="flex flex-col my-5 ">
                 <label class="text-4xl text-gray-700 font-semibold">Log in to your account</label>
                 <label class="mt-1">Please sign to continue access <span class="text-red-500">24</span><span class="text-blue-900">Slides</span> management apps</label>
@@ -161,7 +161,7 @@
            </div>
 
            <div class="p-2 bg-gradient-to-tr from-blue-500 to-purple-400 rounded-2xl mx-auto" data-aos="fade-down">
-           <div class="row-span-2 rounded-2xl grid grid-rows-4 md:px-10 px-4 pb-0 md:pb-10 bg-white pt-4 bg-cover bg-no-repeat bg-bottom bg-white " >
+           <div class="row-span-2 rounded-2xl grid md:grid-rows-4 grid-rows-3 md:px-10 px-4 pb-0 md:pb-10 bg-white pt-4 bg-cover bg-no-repeat bg-bottom bg-white " >
              <div class="grid grid-rows-2 md:grid-cols-2 items-center justify-items-start">
                 <div class="flex flex-col text-left border-b">
                   <label class="text-3xl font-black text-gray-700 leading-tight">Application Board</label> 
