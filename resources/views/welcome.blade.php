@@ -65,6 +65,7 @@
        
     </head>
     <body class="antialiased " >
+        @guest
         <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-full h-max-screen"  >
           
@@ -145,8 +146,9 @@
             
         
         </div>
+        @endguest
 
-
+        @auth
         <div class=" w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-center text-gray-500 overflow-y-auto bg-fixed" style="background-image: url({{ asset('image/bk.svg') }});" >
            
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-12 font-semibold text-base md:text-lg gap-4 h-full" >
@@ -264,6 +266,7 @@
             
         
         </div>
+        @endauth
 
         <script type="text/javascript">
               function searching1() {
