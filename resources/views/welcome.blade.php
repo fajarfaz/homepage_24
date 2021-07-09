@@ -101,7 +101,7 @@
                   </label>
                     </div>
                     <div class="md:w-2/3">
-                      <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="email@domain.com" />
+                      <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" id="email"  type="email" name="email" :value="old('email')" required autofocus placeholder="email@domain.com" />
                   </div>
               </div>
               <div class="md:flex md:items-center mb-6">
@@ -112,7 +112,7 @@
                 
                 </div>
                 <div class="md:w-2/3">
-                          <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="password" name="password" required autocomplete="current-password" placeholder="******************" />
+                          <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="password" name="password" required autocomplete="current-password" placeholder="******************" />
                       </div>
                   </div>
                   <div class="md:flex md:items-center mb-2 ">
