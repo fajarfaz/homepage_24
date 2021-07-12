@@ -72,12 +72,12 @@
     <body class="antialiased " >
         @guest
         <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
-           <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-full h-max-screen"  >
+           <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-screen"  >
           
 
-           <div class="py-2 md:px-0 px-4 container border-7 border-blue-400 rounded-none md:rounded-2xl mx-auto " data-aos="fade-down">
-           <div class=" rounded-2xl grid grid-cols-5 py-4 px-6 rounded-2xl gap-8" >
-            <div class="md:block hidden relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat" data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
+           <div class="py-2  md:px-0 px-4 container border-7 border-blue-400 rounded-none md:rounded-2xl mx-auto h-full" data-aos="fade-down">
+           <div class=" rounded-2xl grid grid-cols-5 py-4 px-6 rounded-2xl gap-8 h-full" >
+            <div class="md:block hidden relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat pb-14" data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
             url('https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');;" >
             <div class="flex flex-col space-y-2 h-full text-white">
               <label class=" text-xl">24Slides <span class="font-normal">Malang</span></label>
@@ -89,8 +89,8 @@
                <div style="transform: skewY(6deg);transform-origin: top left;" class="absolute w-full h-3/6 bg-gradient-to-tr from-purple-400 to purple-700 rounded-bl-xl bottom-16 right-0 shadow-lg"></div>
               
             </div>
-           
-            <div class="col-span-5 md:col-span-3 text-left grid grid-rows-3 lg:grid-rows-4 pt-4 mx-auto" data-aos="fade-right"> 
+           <div  x-data="{ forgotPass: false }" class="col-span-5 md:col-span-3 relative">
+            <div x-show="!forgotPass" x-transition class="h-full text-left grid grid-rows-3 lg:grid-rows-4 pt-4 mx-auto" data-aos="fade-right"> 
                 <div class="flex flex-col my-5 ">
                 <label class="text-4xl text-gray-700 start-label tracking-wide">Get's Started.</label>
                 <label class="mt-1">Please sign to continue access <span class="text-red-500">24</span><span class="text-blue-900">Slides</span> management apps</label>
@@ -138,13 +138,58 @@
                   </x-jet-button>
             </div>
             </div>
-            <div class="bottom-0 absolute flex justify-between items-center w-full space-x-2" >
-            <div class="flex-auto border border-gray-300 rounded-xl w-full" ></div>
-            <label class="flex-shrink-0 text-base w-auto">Forgot your Password?<a href="{{ route('password.request') }}" class="text-blue-500 hover:text-blue-700 duration-300"> Reset here </a></label>
-            </div>
             </form>
+            <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
+            <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+            <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Forgot your Password?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Reset here </button></label>
+            </div>            
                 </div>
+
             </div>
+
+            <div x-show="forgotPass" x-transition class="absolute h-full inset-0 text-left">
+                <div class="static grid grid-rows-2 lg:grid-rows-3 mx-auto  aos-init aos-animate h-full pt-4" data-aos="fade-right"">
+                <div class="flex flex-col my-5 ">
+                    <label class="text-4xl text-gray-700 start-label tracking-wide ">Reset password.</label>
+                    <label class="mt-3">Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</label>
+                </div>
+                <div class="row-span-3 py-0 md:py-3 relative">
+
+                    <form class="w-full max-w-sm " method="POST" action="{{ route('password.email') }}">
+                        @csrf
+                        <div class="md:flex md:items-center my-6 h-10">
+                            <div class="md:w-1/3">
+                                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                                    Email
+                                </label>
+                            </div>
+                            <div class="md:w-2/3">
+                              <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-3 text-gray-700 leading-wide focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="email" name="email" :value="old('email')"  required autofocus placeholder="email@domain.com" />
+                          </div>
+                      </div>
+
+
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3"></div>
+                        <div class="md:w-2/3">
+                          <x-jet-button class="md:mt-0 mt-10 shadow-md bg-blue-500 hover:bg-blue-400  focus:outline-none text-white font-bold py-2 px-4 rounded w-full text-base ">
+                              {{ __('Send Request') }}
+                          </x-jet-button>
+                      </div>
+                  </div>
+              </form>
+              <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
+                <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+                    <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Do you have Account?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Login here </button></label></label>
+                </div>            
+            </div>
+
+        </div> 
+                    
+            </div>
+            </div>
+
+
            </div>
            </div>
 
