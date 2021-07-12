@@ -260,7 +260,7 @@
                        <label class="font-bold text-sm"><i class="fas fa-check-circle text-green-400"></i> Integrated login</label>
                        <div class="flex justify-between items-center">
                            <label>Last Login</label>
-                           <label class="border-2 rounded-xl px-2 py-1 text-xs">Today</label>
+                           <label class="border-2 rounded-xl px-2 py-1 text-xs">{{Carbon\Carbon::parse(auth()->user()->last_seen)->diffForHumans()}}</label>
                        </div>
                    </div>               
                 </li>
@@ -289,7 +289,7 @@
                         <label class="font-bold text-sm"><i class="fas fa-check-circle text-green-400"></i> Integrated login</label>
                        <div class="flex justify-between items-center">
                            <label>Last Login</label>
-                           <label class="border-2 rounded-xl text-xs px-2 py-1">18/6/2021</label>
+                           <label class="border-2 rounded-xl text-xs px-2 py-1">{{Carbon\Carbon::parse(auth()->user()->last_seen)->diffForHumans()}}</label>
                        </div>
                    </div>
                 </li>
