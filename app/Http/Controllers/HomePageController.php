@@ -11,14 +11,17 @@ class HomePageController extends Controller
 {
     public function homepage()
     {
-    	$countOnline = 0;
+    	$attendOnline = 0;
+    	$cateringOnline = 0;
 		$users = User::all();
 		foreach ($users as $user) {
-			if (Cache::has('is_online' . $user->id)) {
-				$countOnline++;
+			if (Cache::has('Attendance_online' . $user->id)) {
+				$attendOnline++;
+			}
+			elseif(Cache::has('Catering_online' . $user->id)){
+				$cateringOnline++;
 			}
 		}
-		return dd($countOnline);
-		return view('welcome',compact('countOnline'));
+		return view('welcome',compact('attendOnline','cateringOnline'));
     }
 }

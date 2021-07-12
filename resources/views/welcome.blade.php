@@ -243,7 +243,7 @@
                          <label class="absolute -bottom-7 right-1 text-xs tracking-wide font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                            24 Online Now</label>
+                            {{$attendOnline}} Online Now</label>
                         </a>
                       
                        
@@ -273,7 +273,7 @@
                          <label class="absolute -bottom-7 right-1 text-xs tracking-wide  font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                            24 Online Now</label>
+                            {{$cateringOnline}} Online Now</label>
                         </a>
                        
                     </div>
