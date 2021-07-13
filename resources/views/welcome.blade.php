@@ -211,7 +211,7 @@
                 <label class="text-3xl md:text-5xl font-bold text-gray-700 "> Management App</label>
             </div>
             <label class="tracking-wider ">This is the local homepage for all apps from <span class="text-red-500">24</span><span class="text-blue-900">Slides</span>,<br> Choose the application you need</label>
-            <button class="bg-blue-500 shadow-lg text-white rounded-3xl w-max font-semibold mx-auto px-9 tracking-wider py-3 w-auto justify-self-end mt-4 hover:bg-blue-700 duration-300 animate-bounce focus:outline-none">Open latest app</button>
+            <a @if(Cache::has('latest_url_' . auth()->user()->id)) href="//{{cache('latest_url_' . auth()->user()->id)}}" @else href="#" @endif class="bg-blue-500 shadow-lg text-white rounded-3xl w-max font-semibold mx-auto px-9 tracking-wider py-3 w-auto justify-self-end mt-4 hover:bg-blue-700 duration-300 animate-bounce focus:outline-none">Open latest app</a>
            </div>
 
            <div class="p-2 bg-gradient-to-tr from-blue-500 to-purple-400 rounded-2xl mx-auto" data-aos="fade-down">
