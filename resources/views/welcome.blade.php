@@ -69,7 +69,32 @@
 
        
     </head>
-    <body class="antialiased " >
+    <body class="antialiased " x-data="{ 'showModal': true }" >
+
+        
+            <!--Dialog-->
+            <div class="bg-white w-11/12 md:max-w-2xl rounded-xl shadow-lg py-4 text-left px-6 fixed bottom-10 left-10 z-30 " x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+
+                <!--Title-->
+                <div class="flex justify-between items-center pb-3 text-gray-800">
+                    <p class="text-xl font-bold"><i class="fas fa-check-circle text-green-400"></i> Attention</p>
+                    <div class="cursor-pointer z-50" @click="showModal = false">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- content -->
+                <p class="text-gray-600 font-semibold">We ask for permission to access cookies and gps location from your device for smooth application, Thanks.</p>                
+
+                <!--Footer-->
+              
+
+            </div>
+            <!--/Dialog -->
+        
+
         @guest
         <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-screen"  >
@@ -133,7 +158,7 @@
             <div class="md:flex md:items-center">
                 <div class="md:w-1/3"></div>
                 <div class="md:w-2/3">
-                  <x-jet-button class=" shadow-md bg-blue-500 hover:bg-blue-400  focus:outline-none text-white font-bold py-2 px-4 rounded w-full text-base ">
+                  <x-jet-button class=" shadow-md bg-blue-500 hover:bg-blue-400 focus:outline-none text-white font-bold py-2 px-4 rounded w-full text-base ">
                       {{ __('Sign in') }}
                   </x-jet-button>
             </div>
