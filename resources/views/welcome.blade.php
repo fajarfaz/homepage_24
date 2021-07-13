@@ -285,10 +285,10 @@
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                         
                         <a href="http://attendance.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
-                         <label class="absolute -bottom-7 right-1 text-xs tracking-wide font-normal">
+                         <label class="absolute -top-6 right-1 text-xs tracking-wide font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                            {{$attendOnline}} Online Now</label>
+                            {{$attendOnline}} Online</label>
                         </a>
                       
                        
@@ -315,10 +315,10 @@
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                          
                         <a href="http://catering.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
-                         <label class="absolute -bottom-7 right-1 text-xs tracking-wide  font-normal">
+                         <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                            {{$cateringOnline}} Online Now</label>
+                            {{$cateringOnline}} Online</label>
                         </a>
                        
                     </div>
@@ -344,10 +344,10 @@
                 <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
 
                     <a href="http://snipe-it.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
-                       <label class="absolute -bottom-7 right-1 text-xs tracking-wide  font-normal">
+                       <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
                         <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                         <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                    24 Online Now</label>
+                    24 Online</label>
                 </a>
 
             </div>
