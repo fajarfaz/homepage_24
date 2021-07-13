@@ -4,16 +4,18 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
+               
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('welcome') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
 
+                    <a href="{{ route('welcome') }}" class="flex items-center">
+                        <img class="h-10" src="{{ asset('image/logo2.png') }}" alt="" height="38px">                        
+                    </a>
+
+              </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('welcome') }}" :active="request()->routeIs('welcome')">
-                        {{ __('Dashboard') }}
+                        {{ __('Homepage') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -119,6 +121,41 @@
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
+                    </x-jet-dropdown>                  
+
+                </div>
+                 <div class="relative">
+                    <x-jet-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <span class="inline-flex rounded-md">
+                                <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-base leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <img class="h-8 w-8 object-cover border-2 rounded-lg border-red-400 opacity-75 hover:opacity-100 duration-300" src="{{ asset('image/logo.png') }}"/>
+                                   
+                                </button>
+                            </span>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <!-- App Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-700 font-semibold border-b">
+                                {{ __('Change Application') }}
+                            </div>
+                         <!--    <div class="grid grid-cols-2">
+                                <a href="">DSA</a>
+                                <a href="">SA</a><i class="fas fa-laptop-house"></i>
+                            </div> -->
+                            <x-jet-dropdown-link href="https://pahlawandesignstudio.com/">                                
+                                <i class="fas fa-laptop-house mr-2"></i>{{ __('Homepage') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="https://attendance.pahlawandesignstudio.com/">
+                                <i class="fas fa-briefcase mr-2"></i>{{ __('Attendance') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="https://catering.pahlawandesignstudio.com/">
+                               <i class="fas fa-utensils mr-2"></i>{{ __('Catering') }}
+                            </x-jet-dropdown-link>
+
+                           
+                        </x-slot>
                     </x-jet-dropdown>
                 </div>
             </div>
@@ -140,6 +177,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('welcome') }}" :active="request()->routeIs('welcome')">
                 {{ __('Dashboard') }}
+            </x-jet-responsive-nav-link>            
+             <x-jet-responsive-nav-link href="https://attendance.pahlawandesignstudio.com/">
+                {{ __('Attendance') }}
+            </x-jet-responsive-nav-link>
+             <x-jet-responsive-nav-link href="https://catering.pahlawandesignstudio.com/">
+                {{ __('Catering') }}
             </x-jet-responsive-nav-link>
         </div>
 
