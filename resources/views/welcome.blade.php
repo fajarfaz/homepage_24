@@ -72,6 +72,31 @@
     <body class="antialiased " x-data="{ 'showModal': true }" >
 
         
+
+            @if (session('status'))
+            <!--Notif Success-->
+            <div class="bg-white w-11/12 md:max-w-2xl rounded-xl shadow-lg py-4 text-left px-6 fixed bottom-10 left-10 z-30 " x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+
+                <!--Title-->
+                <div class="flex justify-between items-center pb-3 text-gray-800">
+                    <p class="text-xl font-bold"><i class="fas fa-check-circle text-green-400"></i> Successfully</p>
+                    <div class="cursor-pointer z-50" @click="showModal = false">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- content -->
+                <p class="text-gray-600 font-semibold">{{ session('status') }}</p>                
+
+                <!--Footer-->
+              
+
+            </div>
+            <!--/Notif Success -->
+            @else
+            
             <!--Dialog-->
             <div class="bg-white w-11/12 md:max-w-2xl rounded-xl shadow-lg py-4 text-left px-6 fixed bottom-10 left-10 z-30 " x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
 
@@ -93,6 +118,7 @@
 
             </div>
             <!--/Dialog -->
+            @endif
         
 
         @guest
@@ -183,13 +209,14 @@
                     <form class="w-full max-w-sm " method="POST" action="{{ route('password.email') }}">
                         @csrf
                         <div class="md:flex md:items-center my-6 h-10">
+                            <x-jet-validation-errors class="mb-4" />
                             <div class="md:w-1/3">
-                                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-email-reset">
                                     Email
                                 </label>
                             </div>
                             <div class="md:w-2/3">
-                              <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-3 text-gray-700 leading-wide focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="email" name="email" :value="old('email')"  required autofocus placeholder="email@domain.com" />
+                              <x-jet-input class="bg-gray-50 shadow-md appearance-none border-2 border-gray-300 hover:bg-white rounded w-full py-2 px-3 text-gray-700 leading-wide focus:outline-none focus:bg-white focus:border-blue-500" id="inline-email-reset" type="email" name="email" :value="old('email')"  required autofocus placeholder="email@domain.com" />
                           </div>
                       </div>
 
