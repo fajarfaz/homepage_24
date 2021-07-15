@@ -98,7 +98,7 @@
             @else
             
             <!--Dialog-->
-            <div class="bg-white w-11/12 md:max-w-2xl rounded-xl shadow-lg py-4 text-left px-6 fixed bottom-10 left-10 z-30 " x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+            <div class="bg-white w-11/12 md:max-w-2xl rounded-xl shadow-lg py-4 text-left px-6 fixed bottom-10 left-10 z-30 md:inline hidden" x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
 
                 <!--Title-->
                 <div class="flex justify-between items-center pb-3 text-gray-800">
@@ -142,7 +142,7 @@
             </div>
            <div  x-data="{ forgotPass: false }" class="col-span-5 md:col-span-3 relative">
             <div x-show="!forgotPass" x-transition class="h-full text-left grid grid-rows-3 lg:grid-rows-4 pt-4 mx-auto" data-aos="fade-right"> 
-                <div class="flex flex-col my-5 ">
+                <div class="flex flex-col my-auto md:my-5">
                 <label class="text-4xl text-gray-700 start-label tracking-wide">Get's Started.</label>
                 <label class="mt-1">Please sign to continue access <span class="text-red-500">24</span><span class="text-blue-900">Slides</span> management apps</label>
                 </div>
@@ -200,7 +200,7 @@
 
             <div x-show="forgotPass" x-transition class="absolute h-full inset-0 text-left">
                 <div class="static grid grid-rows-2 lg:grid-rows-3 mx-auto  aos-init aos-animate h-full pt-4" data-aos="fade-right"">
-                <div class="flex flex-col my-5 ">
+                <div class="flex flex-col my-auto md:my-5">
                     <label class="text-4xl text-gray-700 start-label tracking-wide ">Reset password.</label>
                     <label class="mt-3">Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</label>
                 </div>
