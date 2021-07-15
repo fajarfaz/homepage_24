@@ -62,16 +62,18 @@
           backdrop-filter: blur(5px);
       }
 
-    
 
         </style>
-     
+        <script type="text/javascript">
+          function modalfu() {}
+      </script>
 
        
     </head>
-    <body class="antialiased " x-data="{ 'showModal': true }" >
 
-        
+    <body class="antialiased " x-data="{ 'showModal': true,'wrongModal': true }" >
+           <x-jet-validation-errors />
+        <button class="modal-open visible absolute" id="modal-click" data-toggle="modal" data-target="login-danger"></button>
 
             @if (session('status'))
             <!--Notif Success-->
@@ -146,7 +148,7 @@
                 <label class="text-4xl text-gray-700 start-label tracking-wide">Get's Started.</label>
                 <label class="mt-1">Please sign to continue access <span class="text-red-500">24</span><span class="text-blue-900">Slides</span> management apps</label>
                 </div>
-                <x-jet-validation-errors />
+             
                 <div class="row-span-3 py-3 relative">
 
                     <form class="w-full max-w-sm " method="POST" action="{{ route('login') }}">
@@ -467,5 +469,6 @@
           
 
       </script>
+
     </body>
 </html>
