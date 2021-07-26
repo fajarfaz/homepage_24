@@ -339,7 +339,7 @@
                 <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" style="background-image:url({{ asset('image/attend.jpeg') }});" > 
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                         
-                        <a href="http://attendance.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
+                        <a href="https://attendance.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
                          <label class="absolute -top-6 right-1 text-xs tracking-wide font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
@@ -369,7 +369,7 @@
                 <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" data-aos-delay="300" style="background-image:url({{ asset('image/catering.jpeg') }});" > 
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                          
-                        <a href="http://catering.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
+                        <a href="https://catering.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
                          <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
                             <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                             <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
@@ -398,7 +398,7 @@
                 style="background-image:url({{ asset('image/snipe.jpg') }});" > 
                 <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
 
-                    <a href="http://snipe-it.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
+                    <a href="https://snipe-it.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
                        <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
                         <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                         <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
