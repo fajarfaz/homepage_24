@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-        <title>Laravel</title>
+        <title>24Slides Indonesia</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500,700,800" rel="stylesheet">
@@ -194,7 +194,7 @@
             </div>
             </form>
             <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
-            <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+            <div class="flex-auto p-0.5 bg-gradient-to-l from-gray-400 rounded-xl w-full md:inline-flex hidden" ></div>
             <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Forgot your Password?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Reset here </button></label>
             </div>            
                 </div>
@@ -204,7 +204,7 @@
             <div x-show="forgotPass" x-transition class="absolute h-full inset-0 text-left">
                 <div class="static grid grid-rows-2 lg:grid-rows-3 mx-auto  aos-init aos-animate h-full pt-4" data-aos="fade-right"">
                 <div class="flex flex-col my-auto md:my-5">
-                    <label class="text-4xl text-gray-700 start-label tracking-wide ">Reset password.</label>
+                    <label class="text-4xl text-gray-700 start-label tracking-wide ">Forgot password.</label>
                     <label class="mt-3">Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</label>
                 </div>
                 <div class="row-span-3 py-0 md:py-3 relative">
