@@ -194,7 +194,7 @@
             </div>
             </form>
             <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
-            <div class="flex-auto p-0.5 bg-gradient-to-l from-gray-400 rounded-xl w-full md:inline-flex hidden" ></div>
+            <div class="flex-auto pt-0.5 bg-gradient-to-l from-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
             <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Forgot your Password?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Reset here </button></label>
             </div>            
                 </div>
@@ -234,7 +234,7 @@
                   </div>
               </form>
               <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
-                <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+                <div class="flex-auto pt-0.5 bg-gradient-to-l from-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
                     <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Do you have Account?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Login here </button></label></label>
                 </div>            
             </div>
