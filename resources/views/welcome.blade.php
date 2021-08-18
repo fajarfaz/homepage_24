@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <title>24Slides Indonesia</title>
 
@@ -13,7 +13,7 @@
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ asset('public/js/app.js') }}" defer></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -124,7 +124,7 @@
         
 
         @guest
-        <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('image/bk.svg') }});" >           
+        <div class=" w-max-xl min-h-screen px-0  bg-cover bg-no-repeat bg-fixed bg-center text-gray-500 overflow-y-hidden" style="background-image: url({{ asset('public/image/bk.svg') }});" >           
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-0 md:py-12 font-semibold text-base md:text-lg gap-4 h-screen"  >
           
 
@@ -194,7 +194,7 @@
             </div>
             </form>
             <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
-            <div class="flex-auto pt-0.5 bg-gradient-to-l from-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+            <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
             <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Forgot your Password?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Reset here </button></label>
             </div>            
                 </div>
@@ -204,7 +204,7 @@
             <div x-show="forgotPass" x-transition class="absolute h-full inset-0 text-left">
                 <div class="static grid grid-rows-2 lg:grid-rows-3 mx-auto  aos-init aos-animate h-full pt-4" data-aos="fade-right"">
                 <div class="flex flex-col my-auto md:my-5">
-                    <label class="text-4xl text-gray-700 start-label tracking-wide ">Forgot password.</label>
+                    <label class="text-4xl text-gray-700 start-label tracking-wide ">Reset password.</label>
                     <label class="mt-3">Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</label>
                 </div>
                 <div class="row-span-3 py-0 md:py-3 relative">
@@ -234,7 +234,7 @@
                   </div>
               </form>
               <div class="bottom-0 inline-flex md:absolute flex justify-between items-center w-full md:space-x-2 md:space-y-0 space-y-2" >
-                <div class="flex-auto pt-0.5 bg-gradient-to-l from-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
+                <div class="flex-auto border border-gray-300 rounded-xl w-full md:inline-flex hidden" ></div>
                     <label class="flex-shrink-0 text-base w-auto flex flex-col mx-auto md:flex-row">Do you have Account?<button @click="forgotPass = !forgotPass" :aria-expanded="forgotPass ? 'true' : 'false'" :class="{ 'active': forgotPass }" class="text-blue-500 hover:text-blue-700 duration-300 font-semibold ml-2 focus:outline-none"> Login here </button></label></label>
                 </div>            
             </div>
@@ -256,13 +256,13 @@
         @endguest
 
         @auth
-        <div class=" w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-center text-gray-500 overflow-y-auto bg-fixed" style="background-image: url({{ asset('image/bk.svg') }});" >
+        <div class=" w-max-xl min-h-screen md:px-0 px-2 bg-cover bg-no-repeat bg-center text-gray-500 overflow-y-auto bg-fixed" style="background-image: url({{ asset('public/image/bk.svg') }});" >
            
            <div class="grid grid-rows-8 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl m-auto text-center py-12 font-semibold text-base md:text-lg gap-4 h-full" >
 
            <div class="grid flex-col w-auto space-y-1 max-w-2xl mx-auto gap-4 mb-8" data-aos="fade-up">
            <div class="flex w-auto flex-col md:flex-row space-x-0 md:space-x-2 items-center mx-auto">
-                <img src="{{ asset('image/logo2.png') }}" class="w-36 md:w-48" >
+                <img src="{{ asset('public/image/logo2.png') }}" class="w-36 md:w-48" >
                 <label class="text-3xl md:text-5xl font-bold text-gray-700 "> Management App</label>
             </div>
             <label class="tracking-wider ">This is the local homepage for all apps from <span class="text-red-500">24</span><span class="text-blue-900">Slides</span>,<br> Choose the application you need</label>
@@ -270,10 +270,11 @@
            </div>
 
            <div class="p-2 bg-gradient-to-tr from-blue-500 to-purple-400 rounded-2xl mx-auto" data-aos="fade-down">
-           <div class="row-span-2 rounded-2xl grid md:grid-rows-4 grid-rows-3 md:px-10 px-4 pb-0 md:pb-10 bg-white pt-4 bg-cover bg-no-repeat bg-bottom bg-white " >
-             <div class="grid grid-rows-2 md:grid-cols-2 items-center justify-items-start">
+           <div class="row-span-2 rounded-xl grid md:grid-rows-4 grid-rows-3 md:px-10 px-4 pb-0 md:pb-10 bg-white pt-4 bg-cover bg-no-repeat bg-bottom bg-white " >
+             <div class="grid grid-rows-2 md:grid-cols-2 items-start md:items-center justify-items-start">
                 <div class="flex flex-col text-left border-b">
-                  <label class="text-3xl font-black text-gray-700 leading-tight">Application Board</label> 
+                  <label class="text-3xl font-black text-gray-700 leading-tight md:block hidden">Application Board</label> 
+                  <label class="text-3xl font-black text-gray-700 leading-tight block md:hidden">Apps Board</label> 
                   <label class="text-gray-500 tracking-wide">We have <span class="text-blue-600">3</span> App Detected</label> 
               </div>
               <div class="flex flex-row justify-self-end space-x-4 items-center">
@@ -294,7 +295,7 @@
                             @keydown.escape="isOpen = false" 
                             class="flex items-center focus:outline-none" 
                     >
-                        <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="w-9 h-9 md:w-10 md:h-10  shadow-lg rounded-full hover:shadow-xl duration-300">
+                        <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="w-9 h-9 md:w-10 md:h-10  shadow-lg rounded-full hover:shadow-xl duration-300 object-cover">
                         <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z" class="heroicon-ui"></path></svg>
                     </button>
                     <ul x-show="isOpen"
@@ -336,7 +337,7 @@
              <div class="flex space-x-6 md:space-x-12 items-center mx-auto px-1 md:px-4 hide-scroll py-6" id="myUL">
                
                 
-                <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" style="background-image:url({{ asset('image/attend.jpeg') }});" > 
+                <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" style="background-image:url({{ asset('public/image/attend.jpeg') }});" > 
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                         
                         <a href="https://attendance.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
@@ -366,7 +367,7 @@
                 </li>
 
             
-                <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" data-aos-delay="300" style="background-image:url({{ asset('image/catering.jpeg') }});" > 
+                <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" data-aos-delay="300" style="background-image:url({{ asset('public/image/catering.jpeg') }});" > 
                     <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
                          
                         <a href="https://catering.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
@@ -378,7 +379,7 @@
                        
                     </div>
 
-                    <label class="absolute capitalize text-sm text-gray-500 -top-5 left-2"> Last Update: <span class="text-gray-700">Today</span></label>
+                    <label class="absolute capitalize text-sm text-gray-500 -top-5 left-2"> Last Update: <span class="text-gray-700">11/07/2021</span></label>
                     <div class="flex-auto flex flex-col rounded-xl px-5 pt-4 font-light text-left text-sm bg-gradient-to-b from-gray-900 to-transparent">
                     <h1 class="font-extrabold text-xl tracking-widest uppercase">Catering App</h1>
                     <label class="text-gray-100 ">Application for order catering</label>
@@ -395,19 +396,19 @@
                 </li>
                     
                 <li class="flex-shrink-0 bg-gray-700 flex text-white flex-col rounded-xl justify-between tracking-wide  bg-cover bg-no-repeat bg-center shadow-xl h-80 w-64 relative hover-trigger hover:shadow-3xl cursor-pointer" data-aos="fade-up" data-aos-delay="600"
-                style="background-image:url({{ asset('image/snipe.jpg') }});" > 
+                style="background-image:url({{ asset('public/image/snipe.jpg') }});" > 
                 <div class="absolute rounded-xl px-4 py-2 hover-target h-full w-full flex  items-center" style="background: #0f0f0f7d;" >
 
                     <a href="https://snipe-it.pahlawandesignstudio.com/" class="relative px-6 py-2 border-4 border-white text-2xl font-bold rounded-xl mx-auto tracking-widest uppercase duration-300 hover:bg-gray-900">Open App
                        <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
-                        <span class="bg-green-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
-                        <span class="bg-green-400 rounded-full p-1 absolute -left-3"></span>
-                    24 Online</label>
+                        <span class="bg-red-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
+                        <span class="bg-red-400 rounded-full p-1 absolute -left-3"></span>
+                    Cannot detect online user</label>
                 </a>
 
             </div>
 
-            <label class="absolute capitalize text-sm text-gray-500 -top-5 left-2"> Last Update: <span class="text-gray-700">Today</span></label>
+            <label class="absolute capitalize text-sm text-gray-500 -top-5 left-2"> Last Update: <span class="text-gray-700">20/07/2021</span></label>
             <div class="flex-auto flex flex-col rounded-xl px-5 pt-4 font-light text-left text-sm bg-gradient-to-b from-gray-900 to-transparent">
                 <h1 class="font-extrabold text-xl tracking-widest uppercase">Snipe-IT App</h1>
                 <label class="text-gray-100 ">Application for IT asset management </label>
@@ -418,7 +419,7 @@
              <label class="font-bold text-sm"><i class="fas fa-times-circle text-red-500"></i> Login not integrated</label>
              <div class="flex justify-between items-center">
                  <label>Last Login</label>
-                 <label class="border-2 rounded-xl text-xs px-2 py-1">18/6/2021</label>
+                 <label class="border-2 rounded-xl text-xs px-2 py-1">-</label>
              </div>
          </div>
      </li>
