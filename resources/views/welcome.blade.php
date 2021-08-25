@@ -133,7 +133,7 @@
             <div class="md:block hidden relative rounded-l-2xl px-4 py-2 text-left col-span-2 bg-cover bg-center bg-no-repeat pb-14" data-aos="fade-left" style=" background-image:linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(78 131 218)),
             url('https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');;" >
             <div class="flex flex-col space-y-2 h-full text-white">
-              <label class=" text-xl">24Slides <span class="font-normal">Malang</span></label>
+              <label class=" text-xl">24Slides <span class="font-normal">Indonesia</span></label>
 
               <label class="text-white text-3xl md:pt-56 lg:pt-64 xl:pt-48 z-10 border-l-2 border-white pl-2"  data-aos="fade-right" data-aos-delay="300">Instant access just by logging in to use all existing apps</label>
               <label class="z-10 font-normal text-center"  data-aos="fade-up" data-aos-delay="400">- IT Support -</label>
@@ -361,7 +361,7 @@
                        <label class="font-bold text-sm"><i class="fas fa-check-circle text-green-400"></i> Integrated login</label>
                        <div class="flex justify-between items-center">
                            <label>Last Login</label>
-                           <label class="border-2 rounded-xl px-2 py-1 text-xs">{{Carbon\Carbon::parse(auth()->user()->last_seen)->diffForHumans()}}</label>
+                           <label class="border-2 rounded-xl px-2 py-1 text-xs">@if(Cache::has('Attendance_latest_online_' . auth()->user()->id)) {{Carbon\Carbon::parse(cache('Attendance_latest_online_' . auth()->user()->id))->diffForHumans()}} @endif</label>
                        </div>
                    </div>               
                 </li>
@@ -390,7 +390,7 @@
                         <label class="font-bold text-sm"><i class="fas fa-check-circle text-green-400"></i> Integrated login</label>
                        <div class="flex justify-between items-center">
                            <label>Last Login</label>
-                           <label class="border-2 rounded-xl text-xs px-2 py-1">{{Carbon\Carbon::parse(auth()->user()->last_seen)->diffForHumans()}}</label>
+                           <label class="border-2 rounded-xl text-xs px-2 py-1">@if(Cache::has('Catering_latest_online_' . auth()->user()->id)) {{Carbon\Carbon::parse(cache('Catering_latest_online_' . auth()->user()->id))->diffForHumans()}} @endif</label>
                        </div>
                    </div>
                 </li>
@@ -403,7 +403,7 @@
                        <label class="absolute -top-6 right-1 text-xs tracking-wide  font-normal">
                         <span class="bg-red-400 rounded-full p-1 absolute animate-ping -left-3"> </span>
                         <span class="bg-red-400 rounded-full p-1 absolute -left-3"></span>
-                    Cannot detect online user</label>
+                    Cannot detect</label>
                 </a>
 
             </div>
