@@ -8,7 +8,7 @@
                 <div class="flex-shrink-0 flex items-center">
 
                     <a href="{{ route('welcome') }}" class="flex items-center">
-                        <img class="h-10" src="{{ asset('image/logo2.png') }}" alt="" height="38px">                        
+                        <img class="h-10" src="{{ asset('public/image/logo2.png') }}" alt="" height="38px">                        
                     </a>
 
               </div>
@@ -129,7 +129,7 @@
                         <x-slot name="trigger">
                             <span class="inline-flex rounded-md">
                                 <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-base leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                    <img class="h-8 w-8 object-cover border-2 rounded-lg border-red-400 opacity-75 hover:opacity-100 duration-300" src="{{ asset('image/logo.png') }}"/>
+                                    <img class="h-8 w-8 object-cover border-2 rounded-lg border-red-400 opacity-75 hover:opacity-100 duration-300" src="{{ asset('public/image/logo.png') }}"/>
                                    
                                 </button>
                             </span>

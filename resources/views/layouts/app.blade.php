@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500,700,800" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/app.css') }}">
     <style type="text/css">
     body{
         font-family: 'Quicksand', sans-serif;
@@ -23,7 +23,7 @@
 @livewireStyles
 
 <!-- Scripts -->
-<script src="{{ mix('js/app.js') }}" defer></script>
+<script src="{{ asset('public/js/app.js') }}" defer></script>
 </head>
 <body class="antialiased">
     <x-jet-banner />
